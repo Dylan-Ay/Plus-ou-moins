@@ -18,7 +18,7 @@
         </header>
             <div class="rule mb-5">
                 <p class="half-bold pb-1">La Règle du Jeu :</p>
-                <p>Vous devez trouver un nombre entre 1 et 100 généré aléatoirement par l'ordinateur. Vous avez 5 tentatives par partie.</p>
+                <p>Vous devez trouver un nombre entre 1 et 100 généré aléatoirement par l'ordinateur. Vous avez 10 tentatives par partie.</p>
             </div>
             <div id="game">
                 <div id="score-pannel">
@@ -29,13 +29,13 @@
                     <span id="player">Joueur</span>
                 </div>
                 <div id="user-info">
-                    <span id="info-game">-</span>
+                    <span id="info-game"></span>
                     <div id="insert-number">
                             <label for="number">Insérez un nombre entre 1 et 100:</label>
-                            <p><input type="number" name="number" id="inputNum" required min="1" max="100" class="no-arrow insert-input"></p>
-                            <button id="button">Try</button>
+                            <p><input type="number" name="number" id="inputNum" class="no-arrow insert-input"></p>
+                            <input type="submit" value="Valider" class="guessSubmit">
                     </div>
-                    <span class="attempt-left">Il vous reste <span id="attempt">5</span> tentatives</span>
+                    <span class="attempt-left">Il vous reste <span id="attempt">10</span> tentatives</span>
                 </div>
             </div>
         </main>

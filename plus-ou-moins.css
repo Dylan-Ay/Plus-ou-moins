@@ -1,23 +1,4 @@
 /* <------- Import RFS -------> */
-/*@mixin submit-button{
-    border: solid 2px #424b54;
-    border-radius: 30px;
-    -webkit-transition: 0.8s;
-    font-weight: 400px;
-    transition: 0.8s;
-    font-size: 18px;
-    color: #FFFFFF;
-    background-color: $primary-color;
-    text-align: center;
-    margin-top: 2%;
-    width: 100px;
-    height: 40px;
-        &:hover{
-            box-shadow: inset 10em 0 0 0 #FFFFFF;
-            color: $primary-text-color;
-        }
-} 
-*/
 body {
   background-color: #3D405B;
   font-family: "Ubuntu", sans-serif;
@@ -183,7 +164,7 @@ main #computer {
   font-size: calc(1.3rem + 0.6vw);
   border: 1px solid #3D405B;
   border-radius: 10px;
-  padding: 6% 3.7% 6% 3.7%;
+  padding: 6% 2.84% 6% 2.84%;
   font-weight: 500;
   color: #e63946;
   -webkit-box-flex: 1;

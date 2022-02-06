@@ -13,26 +13,6 @@ $half-bold: 500;
     border: 1px solid $primary-color;
     border-radius: 10px;
 }
-
-/*@mixin submit-button{
-    border: solid 2px #424b54;
-    border-radius: 30px;
-    -webkit-transition: 0.8s;
-    font-weight: 400px;
-    transition: 0.8s;
-    font-size: 18px;
-    color: #FFFFFF;
-    background-color: $primary-color;
-    text-align: center;
-    margin-top: 2%;
-    width: 100px;
-    height: 40px;
-        &:hover{
-            box-shadow: inset 10em 0 0 0 #FFFFFF;
-            color: $primary-text-color;
-        }
-} 
-*/
 body{
     background-color: $primary-color;
     font-family: $font;
@@ -131,7 +111,7 @@ main{
     & #computer{
         @include font-size(28px);
         @include player-commun();
-        padding: 6% 3.7% 6% 3.7%;
+        padding: 6% 2.84% 6% 2.84%;
         font-weight: $half-bold;
         color: $secondary-text-color;
         flex-grow: 1;
@@ -172,10 +152,7 @@ main{
             height: 50px; 
         }
     }
-    & .submit-button{
-        
-    }
-
+    
     & .attempt-left{
         font-size: 18px;
         font-weight: 400;
