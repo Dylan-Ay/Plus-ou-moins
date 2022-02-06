@@ -1,0 +1,313 @@
+/* <------- Import RFS -------> */
+/*@mixin submit-button{
+    border: solid 2px #424b54;
+    border-radius: 30px;
+    -webkit-transition: 0.8s;
+    font-weight: 400px;
+    transition: 0.8s;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: $primary-color;
+    text-align: center;
+    margin-top: 2%;
+    width: 100px;
+    height: 40px;
+        &:hover{
+            box-shadow: inset 10em 0 0 0 #FFFFFF;
+            color: $primary-text-color;
+        }
+} 
+*/
+body {
+  background-color: #3D405B;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0px;
+  color: #33272a;
+}
+
+body .second-color {
+  color: #e63946;
+}
+
+body .half-bold {
+  font-weight: 500;
+}
+
+.no-arrow {
+  -moz-appearance: textfield;
+}
+
+.no-arrow::-webkit-inner-spin-button {
+  display: none;
+}
+
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  margin: auto;
+  text-align: center;
+  background-color: #FFFFFA;
+  width: 65%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 0.5%;
+  padding-bottom: 9%;
+}
+
+@media (max-width: 811px) {
+  main {
+    width: 75%;
+    padding-bottom: 20%;
+  }
+}
+
+main h1 {
+  font-size: calc(1.575rem + 3.9vw);
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  main h1 {
+    font-size: 4.5rem;
+  }
+}
+
+main .rule {
+  font-size: calc(1.2625rem + 0.15vw);
+  color: #e63946;
+  padding-left: 23%;
+  padding-right: 23%;
+}
+
+@media (min-width: 1200px) {
+  main .rule {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 998px) {
+  main .rule {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
+main p {
+  margin: 0px;
+  font-weight: 300;
+}
+
+main #score-pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3% 12% 4% 12%;
+}
+
+@media (max-width: 811px) {
+  main #score-pannel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 10%;
+  }
+}
+
+main #info-game {
+  margin-bottom: 40px;
+  display: block;
+}
+
+main #game {
+  border: 2px solid #3D405B;
+  border-radius: 10px;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: white;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+@media (max-width: 1260px) {
+  main #game {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+}
+
+main #score {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: calc(1.40625rem + 1.875vw);
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-block;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+@media (min-width: 1200px) {
+  main #score {
+    font-size: 2.8125rem;
+  }
+}
+
+@media (max-width: 811px) {
+  main #score {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main #computer {
+  font-size: calc(1.3rem + 0.6vw);
+  border: 1px solid #3D405B;
+  border-radius: 10px;
+  padding: 6% 3.7% 6% 3.7%;
+  font-weight: 500;
+  color: #e63946;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  main #computer {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 811px) {
+  main #computer {
+    padding: 9% 3.2% 9% 3.2%;
+  }
+}
+
+main #player {
+  font-size: calc(1.3rem + 0.6vw);
+  border: 1px solid #3D405B;
+  border-radius: 10px;
+  padding: 6% 7.27% 6% 7.27%;
+  font-weight: 500;
+  color: #e63946;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  main #player {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 811px) {
+  main #player {
+    padding: 9% 10% 9% 10%;
+  }
+}
+
+main #user-info {
+  font-size: calc(1.2625rem + 0.15vw);
+  font-weight: 500;
+  margin-bottom: 8%;
+}
+
+@media (min-width: 1200px) {
+  main #user-info {
+    font-size: 1.375rem;
+  }
+}
+
+main #insert-number {
+  margin-top: 5%;
+}
+
+main .insert-input {
+  margin-top: 19.7px;
+  margin-bottom: 19.7px;
+  width: 140px;
+  height: 57px;
+  border: 1px solid #e63946;
+  border-radius: 10px;
+  font-size: calc(1.275rem + 0.3vw);
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  main .insert-input {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  main .insert-input {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+main .attempt-left {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#footer {
+  margin: auto;
+  background-color: #FFFFFA;
+  width: 69%;
+  text-align: center;
+  min-height: 65px;
+}
+
+@media (max-width: 811px) {
+  #footer {
+    width: 79%;
+  }
+}
+
+#footer a {
+  text-decoration: none;
+  color: #33272a;
+  display: block;
+  padding-top: 20px;
+}
+
+#footer :hover {
+  font-weight: 600;
+}
+
+.pb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-5 {
+  margin-bottom: 48.24px;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+/*# sourceMappingURL=plus-ou-moins.css.map */

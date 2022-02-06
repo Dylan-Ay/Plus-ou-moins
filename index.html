@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- CSS + FONTS Integration -->
+		<link rel="stylesheet" type="text/css" href="plus-ou-moins.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">		
+        <title>Jeu du Plus ou Moins en JavasScript</title>
+	</head>
+    <body>
+        <!-- Main -->
+        <main>
+        <!-- Header -->
+        <header>
+           <h1>Jeu du <span class="second-color">Plus ou Moins</span> en JavaScript</h1> 
+        </header>
+            <div class="rule mb-5">
+                <p class="half-bold pb-1">La Règle du Jeu :</p>
+                <p>Vous devez trouver un nombre entre 1 et 100 généré aléatoirement par l'ordinateur. Vous avez 5 tentatives par partie.</p>
+            </div>
+            <div id="game">
+                <div id="score-pannel">
+                    <span id="computer">Ordinateur</span>
+                    <div id="score">
+                        <span id="computer-score">0</span> : <span id="player-score">0</span>
+                    </div>
+                    <span id="player">Joueur</span>
+                </div>
+                <div id="user-info">
+                    <span id="info-game">-</span>
+                    <div id="insert-number">
+                            <label for="number">Insérez un nombre entre 1 et 100:</label>
+                            <p><input type="number" name="number" id="inputNum" required min="1" max="100" class="no-arrow insert-input"></p>
+                            <button id="button">Try</button>
+                    </div>
+                    <span class="attempt-left">Il vous reste <span id="attempt">5</span> tentatives</span>
+                </div>
+            </div>
+        </main>
+        <!-- JS Integration -->
+        <script src="app.js"></script>
+    </body>
+    <!-- Footer -->
+    <footer id="footer">
+        <a href="https://dylanayache.com/" target="_blank">© Réalisé par Dylan Ayache</a>
+    </footer>
+</html>
