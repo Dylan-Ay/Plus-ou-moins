@@ -151,13 +151,48 @@ main{
             width: 100px;
             height: 50px; 
         }
-    }
-    
-    & .attempt-left{
+    } 
+    & .attempt-left, .replay-info{
         font-size: 18px;
         font-weight: 400;
         margin-left: 10px;
         margin-right: 10px;
+        margin-top: 40px;
+        display: block;
+    }
+    & .guessSubmit, button{
+        margin: auto;
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        box-shadow: 0 7px 0 0 $primary-color;
+        display: block;
+        background: #a47;
+        color: #eee;
+        padding: 5px 10px;
+        width: 90px;
+        border: 0;
+        cursor: pointer;
+        @include font-size(20px);
+        opacity: 0.9;
+        border-radius: 10px;
+        transition: 0.1s linear;
+        &:hover{
+            opacity: 1;
+        }
+        &:active{
+            box-shadow: none;
+            top: 10px;
+            margin-bottom: 0;
+        }
+    }
+        & label{
+            @media (max-width: 455px){
+                display: block;
+                width: 77%;
+                margin: auto;
+        }
     }
 }
 

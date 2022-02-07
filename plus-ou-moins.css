@@ -248,11 +248,54 @@ main .insert-input {
   }
 }
 
-main .attempt-left {
+main .attempt-left, main .replay-info {
   font-size: 18px;
   font-weight: 400;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 40px;
+  display: block;
+}
+
+main .guessSubmit, main button {
+  margin: auto;
+  position: relative;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 7px 0 0 #3D405B;
+          box-shadow: 0 7px 0 0 #3D405B;
+  display: block;
+  background: #a47;
+  color: #eee;
+  padding: 5px 10px;
+  width: 90px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  opacity: 0.9;
+  border-radius: 10px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+main .guessSubmit:hover, main button:hover {
+  opacity: 1;
+}
+
+main .guessSubmit:active, main button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 10px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 455px) {
+  main label {
+    display: block;
+    width: 77%;
+    margin: auto;
+  }
 }
 
 #footer {
