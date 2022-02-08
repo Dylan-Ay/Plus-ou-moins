@@ -29,14 +29,15 @@
                     <span id="player">Joueur</span>
                 </div>
                 <div id="user-info">
-                    <span id="info-game">-</span>
+                    <span id="info-game"></span>
                     <div id="insert-number">
-                            <label for="number">Insérez un nombre entre 1 et 100:</label>
-                            <p><input type="number" name="number" id="inputNum" class="no-arrow insert-input"></p>
+                            <label for="number" id="label-number">Insérez un nombre entre 1 et 100:</label>
+                            <p><input type="number" name="number" id="inputNum" class="no-arrow insert-input" max="100"></p>
+                            <div id="tooltip">Veuillez insérer un nombre compris entre 1 et 100.</div>
                             <input type="submit" value="Valider" class="guessSubmit">
                     </div>
                     <div id="attempt-div">
-                        <span class="attempt-left">Il vous reste <span id="attempt">10</span> tentatives</span>
+                        <span class="attempt-left">Il vous reste <span id="attempt">10</span> tentatives <span id="emoji">&#128512</span></span>
                     </div>
                 </div>
             </div>
@@ -46,6 +47,6 @@
     </body>
     <!-- Footer -->
     <footer id="footer">
-        <a href="https://dylanayache.com/" target="_blank">© Réalisé par Dylan Ayache</a>
+        <!--<a href="https://dylanayache.com/" target="_blank">© Réalisé par Dylan Ayache</a>-->
     </footer>
 </html>
