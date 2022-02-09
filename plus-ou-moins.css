@@ -60,7 +60,7 @@ main {
 
 @media (max-width: 500px) {
   main {
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -115,11 +115,16 @@ main #score-pannel {
 
 @media (max-width: 811px) {
   main #score-pannel {
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 410px) {
+  main #score-pannel {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 10%;
   }
 }
 
@@ -172,6 +177,11 @@ main #score {
   main #score {
     margin-top: 2%;
     margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 410px) {
+  main #score {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -448,7 +458,7 @@ main #emoji {
 
 @media (max-width: 500px) {
   #footer {
-    width: 89%;
+    width: 94%;
   }
 }
 

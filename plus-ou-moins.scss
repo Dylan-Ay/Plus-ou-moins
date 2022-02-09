@@ -89,7 +89,7 @@ main{
         padding-bottom: 20%;
     }
     @media (max-width: 500px){
-        width: 85%;
+        width: 90%;
     }
     & h1{
         @include font-size(72px);
@@ -115,8 +115,10 @@ main{
         align-items: center;
         margin: 3% 12% 4% 12%; //haut droite bas gauche
         @media (max-width: 811px){
-            flex-direction: column;
             margin-bottom: 10%;
+        }
+        @media (max-width: 410px){
+            flex-direction: column;
         }
     }
     & #info-game{
@@ -146,8 +148,10 @@ main{
         @media (max-width: 811px){
             margin-top: 2%; 
             margin-bottom: 2%;
-            flex-direction: column;
         }  
+        @media (max-width: 410px){
+            flex-direction: column;
+        }
     }
     & #computer{
         @include font-size(28px);
@@ -276,7 +280,7 @@ main{
         width: 79%; 
     }
     @media (max-width: 500px){
-        width: 89%; 
+        width: 94%; 
     }
         & a{
             text-decoration: none;

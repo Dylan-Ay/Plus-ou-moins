@@ -58,7 +58,7 @@ function checkGuess() {
 // Si condition rempli afficher un message et changer le score
       } else {
         if (userGuess === randomNumber){
-          info.innerHTML = "Bravo, vous avez trouvé le bon nombre, vous gagnez 1 point !";
+          info.innerHTML = "Bravo, vous avez trouvé le bon nombre, vous gagnez 1 point!";
           playerScore.innerHTML++;
           attemptLeft.style.display = "none";
           setGameOver();
