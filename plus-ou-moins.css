@@ -51,14 +51,20 @@ main {
   padding-bottom: 9%;
 }
 
-@media (max-width: 811px) {
+@media (max-width: 1500px) {
   main {
-    width: 75%;
+    width: 73%;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: 80%;
     padding-bottom: 20%;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   main {
     width: 90%;
   }
@@ -450,13 +456,19 @@ main #emoji {
   min-height: 65px;
 }
 
-@media (max-width: 811px) {
+@media (max-width: 1500px) {
   #footer {
-    width: 79%;
+    width: 77%;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
+  #footer {
+    width: 84%;
+  }
+}
+
+@media (max-width: 650px) {
   #footer {
     width: 94%;
   }

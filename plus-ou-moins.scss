@@ -84,11 +84,14 @@ main{
     padding-right: 2%;
     padding-top: 0.5%;
     padding-bottom: 9%;
-    @media (max-width: 811px){
-        width: 75%;
+    @media (max-width: 1500px){
+        width: 73%;
+    }
+    @media (max-width: 1000px){
+        width: 80%;
         padding-bottom: 20%;
     }
-    @media (max-width: 500px){
+    @media (max-width: 650px){
         width: 90%;
     }
     & h1{
@@ -276,10 +279,13 @@ main{
     width: 69%;
     text-align: center;
     min-height: 65px;
-    @media (max-width: 811px){
-        width: 79%; 
+    @media (max-width: 1500px){
+        width: 77%;
     }
-    @media (max-width: 500px){
+    @media (max-width: 1000px){
+        width: 84%;
+    }
+    @media (max-width: 650px){
         width: 94%; 
     }
         & a{
