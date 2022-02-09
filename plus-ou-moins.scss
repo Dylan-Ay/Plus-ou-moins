@@ -9,10 +9,36 @@ $secondary-text-color: #e63946;
 $font: 'Ubuntu', sans-serif;
 $half-bold: 500;
 
+// Mixins
 @mixin player-commun{
     border: 1px solid $primary-color;
     border-radius: 10px;
 }
+@mixin button-commun{
+    position: relative;
+    top: 0;
+    box-shadow: 0 7px 0 0 $primary-color;
+    display: block;
+    background: $secondary-text-color;
+    color: #eee;
+    padding: 5px 10px;
+    border: 0;
+    cursor: pointer;
+    @include font-size(20px);
+    opacity: 0.85;
+    border-radius: 10px;
+    transition: 0.1s linear;
+    &:hover{
+        opacity: 1;
+    }
+    &:active{
+        box-shadow: none;
+        top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+// General rules
 body{
     background-color: $primary-color;
     font-family: $font;
@@ -25,19 +51,30 @@ body{
         font-weight: $half-bold;
     }
 }
-
+// Enlève les flèches "monter, descendre" du champ "number"
 .no-arrow {
     -moz-appearance: textfield;
   }
-  .no-arrow::-webkit-inner-spin-button {
+.no-arrow::-webkit-inner-spin-button {
     display: none;
-  }
-  .no-arrow::-webkit-outer-spin-button,
-  .no-arrow::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
+}
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.pb-1{
+    margin-bottom: 8px;
+}
+.mb-5{
+    margin-bottom: 48.24px;
+}
+.mt-3{
+    margin-top: 15px;
+}
+
+// MAIN
 main{
     margin: auto;
     text-align: center;
@@ -61,14 +98,14 @@ main{
     & .rule{
         @include font-size(22px);
         color: $secondary-text-color;
-        padding-left:23%;
-        padding-right: 23%;
+        padding-left:19%;
+        padding-right: 19%;
         @media (max-width: 998px){
             padding-left:0%;
             padding-right: 0%;
         }
     }
-    & p{
+    & .instruction{
         margin: 0px;
         font-weight: 300;
     }
@@ -84,6 +121,7 @@ main{
     }
     & #info-game{
         margin-top: 35px;
+        margin-bottom: 15px;
         display: block;
     }
     & #game{
@@ -155,6 +193,7 @@ main{
             height: 50px; 
         }
     } 
+    // Info qui s'affiche si champ vide ou nombre > 100 < 1
     & #tooltip{
         position: relative;
         font-size: 16px;
@@ -177,17 +216,17 @@ main{
             padding-bottom: 25px;
             padding-top: 25px;
         }
-    } & #tooltip:after{
+    } 
+    & #tooltip:after{
         border: 10px solid;
         border-color: transparent transparent white transparent;
         content: "";
         left: 50%;
         margin-left: -10px;
         position: absolute;
-        //top: -4%;
         bottom: 100%;
-      }
-    & .attempt-left, .replay-info{
+    }
+    & .attempt-left, #replay-info{
         font-size: 18px;
         font-weight: 400;
         margin-left: 10px;
@@ -195,37 +234,30 @@ main{
         margin-top: 40px;
         display: block;
     }
-    & .guessSubmit, button{
+    & .guessSubmit{
         margin: auto;
-        position: relative;
-        top: 0;
-        margin-bottom: 20px;
-        box-shadow: 0 7px 0 0 $primary-color;
-        display: block;
-        background: $secondary-text-color;
-        color: #eee;
-        padding: 5px 10px;
+        @include button-commun();
         width: 90px;
-        border: 0;
-        cursor: pointer;
-        @include font-size(20px);
-        opacity: 0.85;
-        border-radius: 10px;
-        transition: 0.1s linear;
-        &:hover{
-            opacity: 1;
-        }
-        &:active{
-            box-shadow: none;
-            top: 10px;
-            margin-bottom: 0;
-        }
     }
-        & label{
-            @media (max-width: 455px){
-                display: block;
-                width: 77%;
-                margin: auto;
+    & #new-button{
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    & #new-button :first-child{
+        @include button-commun();
+        margin-right: 10px;
+        width: 90px;
+    }
+    & #new-button :last-child{
+        @include button-commun();
+        width: 154px;
+    }
+    & label{
+        @media (max-width: 455px){
+            display: block;
+            width: 77%;
+            margin: auto;
         }
     }
     & #emoji{
@@ -233,6 +265,7 @@ main{
     }
 }
 
+// <-- FOOTER -->
 #footer{
     margin: auto;
     background-color: $main-color;
@@ -254,15 +287,4 @@ main{
     & :hover{
         font-weight: 600;
     }
-}
-
-
-.pb-1{
-    margin-bottom: 8px;
-}
-.mb-5{
-    margin-bottom: 48.24px;
-}
-.mt-3{
-    margin-top: 15px;
 }

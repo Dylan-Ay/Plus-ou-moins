@@ -28,6 +28,18 @@ body .half-bold {
   margin: 0;
 }
 
+.pb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-5 {
+  margin-bottom: 48.24px;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
 main {
   margin: auto;
   text-align: center;
@@ -66,8 +78,8 @@ main h1 {
 main .rule {
   font-size: calc(1.2625rem + 0.15vw);
   color: #e63946;
-  padding-left: 23%;
-  padding-right: 23%;
+  padding-left: 19%;
+  padding-right: 19%;
 }
 
 @media (min-width: 1200px) {
@@ -83,7 +95,7 @@ main .rule {
   }
 }
 
-main p {
+main .instruction {
   margin: 0px;
   font-weight: 300;
 }
@@ -113,6 +125,7 @@ main #score-pannel {
 
 main #info-game {
   margin-top: 35px;
+  margin-bottom: 15px;
   display: block;
 }
 
@@ -296,7 +309,7 @@ main #tooltip:after {
   bottom: 100%;
 }
 
-main .attempt-left, main .replay-info {
+main .attempt-left, main #replay-info {
   font-size: 18px;
   font-weight: 400;
   margin-left: 10px;
@@ -305,18 +318,16 @@ main .attempt-left, main .replay-info {
   display: block;
 }
 
-main .guessSubmit, main button {
+main .guessSubmit {
   margin: auto;
   position: relative;
   top: 0;
-  margin-bottom: 20px;
   -webkit-box-shadow: 0 7px 0 0 #3D405B;
           box-shadow: 0 7px 0 0 #3D405B;
   display: block;
   background: #e63946;
   color: #eee;
   padding: 5px 10px;
-  width: 90px;
   border: 0;
   cursor: pointer;
   font-size: 1.25rem;
@@ -324,13 +335,85 @@ main .guessSubmit, main button {
   border-radius: 10px;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
+  width: 90px;
 }
 
-main .guessSubmit:hover, main button:hover {
+main .guessSubmit:hover {
   opacity: 1;
 }
 
-main .guessSubmit:active, main button:active {
+main .guessSubmit:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 10px;
+  margin-bottom: 0;
+}
+
+main #new-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+}
+
+main #new-button :first-child {
+  position: relative;
+  top: 0;
+  -webkit-box-shadow: 0 7px 0 0 #3D405B;
+          box-shadow: 0 7px 0 0 #3D405B;
+  display: block;
+  background: #e63946;
+  color: #eee;
+  padding: 5px 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  opacity: 0.85;
+  border-radius: 10px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  margin-right: 10px;
+  width: 90px;
+}
+
+main #new-button :first-child:hover {
+  opacity: 1;
+}
+
+main #new-button :first-child:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 10px;
+  margin-bottom: 0;
+}
+
+main #new-button :last-child {
+  position: relative;
+  top: 0;
+  -webkit-box-shadow: 0 7px 0 0 #3D405B;
+          box-shadow: 0 7px 0 0 #3D405B;
+  display: block;
+  background: #e63946;
+  color: #eee;
+  padding: 5px 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  opacity: 0.85;
+  border-radius: 10px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  width: 154px;
+}
+
+main #new-button :last-child:hover {
+  opacity: 1;
+}
+
+main #new-button :last-child:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   top: 10px;
@@ -378,17 +461,5 @@ main #emoji {
 
 #footer :hover {
   font-weight: 600;
-}
-
-.pb-1 {
-  margin-bottom: 8px;
-}
-
-.mb-5 {
-  margin-bottom: 48.24px;
-}
-
-.mt-3 {
-  margin-top: 15px;
 }
 /*# sourceMappingURL=plus-ou-moins.css.map */

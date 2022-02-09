@@ -1,18 +1,19 @@
-//Déclarations variables globales
+//Déclarations des variables globales
 let computerScore = document.getElementById('computer-score');
 let playerScore = document.getElementById('player-score');
 let info = document.getElementById('info-game');
 let attempt = document.getElementById('attempt');
-let guessSubmit = document.querySelector('.guessSubmit'); //Valider
+let guessSubmit = document.querySelector('.guessSubmit'); //Bouton valider
 let guessInput = document.getElementById('inputNum'); // Champ d'insertion
 let attemptLeft = document.querySelector('.attempt-left');
 let randomNumber = Math.floor(Math.random() * 100) + 1; // Génerer un nombre aléatoire 
 let labelNumber = document.getElementById('label-number');
 let emoji = document.getElementById('emoji');
 let restriction = document.getElementById('tooltip');
+let correctNumber = document.getElementById('correct-number');
 let resetButton;
 let replayInfo;
-let attemptDiv;
+let newButton;
 let counter = 10;
 
 // Cliquer sur le boutton si entrée est actionné
@@ -68,11 +69,12 @@ function checkGuess() {
           setGameOver();
         } 
       }
+// Vider le champ d'insertion + ajouter le focus
     guessInput.value = '';
     guessInput.focus();
 }
 
-// A chaque clique, exécuter la fonction checkGuess
+// A chaque clique sur "Valider" , exécuter la fonction checkGuess
 guessSubmit.addEventListener('click', checkGuess);
 
 // Défini les paramètres à prendre en compte quand la partie est perdue
@@ -80,22 +82,31 @@ function setGameOver() {
   guessInput.disabled = true;
   guessSubmit.style.display = "none";
   labelNumber.style.display = "none";
+  divButton = document.getElementById('new-button'); // Récupère la div qui contient les nvx buttons
+  replayButton = document.createElement('button');
+  divButton.appendChild(replayButton);
+  replayButton.innerHTML = 'Rejouer';
+  replayButton.addEventListener('click', resetGame); // A chaque clique sur "rejouer", appeler la fonction resetGame
   resetButton = document.createElement('button');
-  let divButton = document.getElementById('insert-number'); // Récupère la div du bouton
   divButton.appendChild(resetButton);
-  replayInfo = document.createElement('span')
-  attemptDiv = document.getElementById('attempt-div');
-  attemptDiv.appendChild(replayInfo);
-  replayInfo.innerHTML = 'Pour continuer la partie, veuillez cliquer sur "Rejouer".';
-  replayInfo.classList.add('replay-info');
-  resetButton.innerHTML = 'Rejouer';
-  resetButton.addEventListener('click', resetGame);
+  resetButton.innerHTML = 'Nouvelle partie';
+  resetButton.addEventListener('click', newGame); // A chaque clique sur "nouvelle partie", appeler la fonction resetGame
+  divReplayInfo = document.getElementById('replay-info');
+  replayInfo = document.createElement('p');
+  newGameInfo = document.createElement('p');
+  replayInfo.innerHTML = 'Pour continuer la partie, veuillez cliquer sur "Rejouer"';
+  newGameInfo.innerHTML = 'Pour démarrer une nouvelle partie, veuillez cliquer sur "Nouvelle partie"';
+  divReplayInfo.appendChild(replayInfo);
+  divReplayInfo.appendChild(newGameInfo);
+  correctNumber.innerHTML = `Le nombre à trouver était ${randomNumber}.`;
 }
 
-// Relance une nouvelle partie
+// Fonction pour continuer la même partie
 function resetGame(){
-  resetButton.style.display = "none";
-  replayInfo.style.display = "none";
+  divButton.removeChild(replayButton);
+  divButton.removeChild(resetButton);
+  divReplayInfo.removeChild(replayInfo);
+  divReplayInfo.removeChild(newGameInfo);
   labelNumber.style.display = "block";
   guessInput.disabled = false;
   guessSubmit.disabled = false;
@@ -106,5 +117,13 @@ function resetGame(){
   counter = 10;
   attempt.innerHTML = counter;
   emoji.innerHTML = "&#128512";
+  correctNumber.innerHTML = "";
   defineRandomNumber();
+}
+
+// Fonction pour commencer une nouvelle partie
+function newGame(){
+  computerScore.innerHTML = "0";
+  playerScore.innerHTML= "0";
+  resetGame();
 }
